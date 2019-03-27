@@ -30,7 +30,7 @@ export class VotingComponent implements OnInit {
   }
 
   async refresh() {
-    this.electionService.readGurus();    
+    this.electionService.readGurus();
   }
 
 }

@@ -1,0 +1,53 @@
+<div class="h2 font-weight-bold m-30 mb-5 px-4 py-3 bg-lightest text-primary">Testnet Checker: </div>
+
+<div class="ui-messages ui-messages-info d-block" role="alert">
+  You Need to connect your wallet (<b>MetaMask</b>,<b>Mist</b>,<b>Parity</b> or any other) to one of the following networks in order to be able to use this DApp!
+</div>
+<br />
+<p>
+  Our DApp is Currently Deployed on the Following Networks:
+</p>
+<div class="container" style="margin-bottom: 1.5em">
+  <div class="row">
+    <div class="col" *ngIf="checkDeployedOnNetwork(1)">
+      <p-card header="Ethereum" subheader="Ethereum main network" [style]="{width: '360px'}"
+        styleClass="ui-card-shadow">
+        <div> <a href="https://www.ethereum.org/" target="_blank"> NET Ethereum (ETH) Blockchain</a>
+        </div>
+
+      </p-card>
+    </div>
+    <div class="col" *ngIf="checkDeployedOnNetwork(3)">
+      <p-card header="Ropsten" subheader="Ropsten Testnet" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <div> <a href="https://ropsten.etherscan.io/" target="_blank"> TESTNET Ropsten (ETH) Blockchain</a>
+        </div>
+
+      </p-card>
+    </div>
+
+  </div>
+  <hr>
+  <div class="row">
+    <div class="col" *ngIf="checkDeployedOnNetwork(4)">
+      <p-card header="Rinkeby" subheader="Rinkeby Testnet" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <div> <a href="https://rinkeby.etherscan.io/" target="_blank"> NET Ethereum (ETH) Blockchain</a>
+        </div>
+
+      </p-card>
+    </div>
+    <div class="col" *ngIf="checkDeployedOnNetwork(42)">
+      <p-card header="Kovan" subheader="Kovan Testnet" [style]="{width: '360px'}" styleClass="ui-card-shadow">
+        <div> <a href="https://kovan.etherscan.io/" target="_blank"> TESTNET Kovan (ETH) Blockchain</a>
+        </div>
+
+      </p-card>
+    </div>
+
+  </div>
+</div>
+<div *ngIf="compareDeployedNetwork()" class="ui-messages ui-messages-success d-block" role="alert">
+  Your on <b>{{ this.web3Service.network }} </b> and are able to use this DApp!
+</div>
+<div *ngIf="!compareDeployedNetwork()" class="ui-messages ui-messages-danger d-block" role="alert">
+  Your on <b>{{ this.web3Service.network }} </b> and are not able to use this DApp!
+</div>

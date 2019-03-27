@@ -1,10 +1,15 @@
 <p-menubar [model]="items" [autoDisplay]="false">
-<span style="position: relative;">
-  <span *ngIf="this.web3Service.wallet" style="color: darkgrey;">
-    Welcome 
-    <a href="https://etherscan.io/address/{{this.web3Service.wallet}}" 
-        target=”_blank”
+  <span style="position: relative;">
+    <span *ngIf="this.web3Service.wallet" style="color: darkgrey;">
+      Welcome
+      <a href="https://etherscan.io/address/{{this.web3Service.wallet}}" target=”_blank”
         style="color: black; font-weight: bold;">{{this.web3Service.wallet}}</a>
+    </span>
+    <span *ngIf="this.web3Service.network" style="color: darkgrey;">
+      - Network
+      <a href="/#/deployment-network" target=”_blank” style="color: black; font-weight: bold;">
+        <i style="color: darkgreen; font-weight: bold;margin-right:0.5em">{{this.web3Service.network}}</i>
+         <i style="color: green;font-size: 13px; font-weight: bold" class="fa fa-info-circle"></i></a>
+    </span>
   </span>
-</span>
 </p-menubar>

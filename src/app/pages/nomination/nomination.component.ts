@@ -41,10 +41,10 @@ export class NominationComponent implements OnInit {
   async nominateGuru() {
     if (this.wallet == null || this.name == null) {
       if (this.name == null) {
-        this.name = ""; // Will trigger the required-field message
+        this.name = ''; // Will trigger the required-field message
       }
       if (this.wallet == null) {
-        this.wallet = ""; // Will trigger the required-field message
+        this.wallet = ''; // Will trigger the required-field message
       }
       return;
     }

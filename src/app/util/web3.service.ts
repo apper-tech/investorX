@@ -28,6 +28,8 @@ export class Web3Service {
   }
   public ready = false;
 
+  public network = '';
+
   public accountsObservable = new ReplaySubject<string>(1);
 
   constructor() {
@@ -44,16 +46,19 @@ export class Web3Service {
       window.ethereum.enable(); // get permission to access accounts
     } else {
       console.warn(
-        "No web3 detected. Falling back to http://127.0.0.1:8545. You should remove this fallback when you deploy live",
+        'No web3 detected. Falling back to http://127.0.0.1:8545. You should remove this fallback when you deploy live',
       );
       // fallback - use your fallback strategy (local node / hosted node + in-dapp id mgmt / fail)
       this.web3 = new Web3(
-        new Web3.providers.HttpProvider("http://127.0.0.1:8545"),
+        new Web3.providers.HttpProvider('http://127.0.0.1:8545'),
         // Similar URL could be used for staging and production:
         // 'https://ropsten.infura.io/koMImLwOWG3Bsc2hI81Dz'
         // 'https://mainnet.infura.io/koMImLwOWG3Bsc2hI81Dz'
       );
     }
+    this.web3.eth.net.getNetworkType().then(networkName => {
+      this.network = networkName;
+    });
 
     setInterval(() => this.refreshAccounts(), 340);
   }
@@ -70,7 +75,6 @@ export class Web3Service {
     return contractAbstraction;
 
   }
-
   private refreshAccounts() {
     this.web3.eth.getAccounts((err, accs) => {
       console.log('Refreshing accounts');

@@ -25,6 +25,7 @@
     "@angular/platform-server": "7.1.0",
     "@angular/router": "7.1.0",
     "core-js": "^2.6.5",
+    "dotenv": "^7.0.0",
     "ethers": "^4.0.26",
     "openzeppelin-solidity": "^2.1.2",
     "openzeppelin-test-helpers": "^0.1.2",
@@ -33,6 +34,7 @@
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.4.0",
     "truffle-contract": "^4.0.6",
+    "truffle-hdwallet-provider": "^1.0.5",
     "tslib": "^1.9.0",
     "web3": "1.0.0-beta.37",
     "zone.js": "^0.8.29"

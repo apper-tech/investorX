@@ -35,7 +35,7 @@ export class AppNavComponent implements OnInit {
         label: 'Election Management',
         routerLink: ['/election-managment'],
         visible: this.electionFactoryService.isCurrentUserTheFactoryChairperson,
-      },    
+      },
     ];
   }
 }

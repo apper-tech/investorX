@@ -5,10 +5,9 @@
 
 
 <div class="table table-responsive form-group">
-  <p-table #table class="table tbl-filter consents" rowHover="true" sortMode="none" dataKey="index" [loading]="loading"
-    [columns]="cols" [responsive]="true" [value]="this.electionService.electionModel.gurus" paginator="true" rows="50"
-    [sortField]="cols[0].field" [(selection)]="selectedPermissions" (onRowSelect)="handleRowSelection($event)"
-    (onRowUnselect)="handleRowDeselection($event)">
+  <p-table #table class="table tbl-filter consents" rowHover="true" sortMode="none" dataKey="index" [columns]="cols"
+    [responsive]="true" [value]="this.electionService.electionModel.gurus" paginator="true" rows="50"
+    [sortField]="cols[0].field">
 
     <ng-template pTemplate="header" let-columns>
       <tr>
@@ -35,19 +34,20 @@
         </td>
         <td>
           <span style="font-family: courier new;">{{rowData['wallet']}}</span>
-          <a title="View at EtherScan.io" target="_blank" href='{{"https://etherscan.io/address/" + rowData["wallet"]}}'>
-            <span class="inline-bottom-font" pButton icon="fas fa-external-link-alt"
-              iconPos="left" class="btn-outline-yellowDark"></span>
+          <a title="View at EtherScan.io" target="_blank"
+            href='{{"https://etherscan.io/address/" + rowData["wallet"]}}'>
+            <span class="inline-bottom-font" pButton icon="fas fa-external-link-alt" iconPos="left"
+              class="btn-outline-yellowDark"></span>
           </a>
         </td>
         <td>
           {{rowData['votesCount']}}
         </td>
         <td>
-          <button *ngIf="!rowData['isElectedByCurrentUser']" (click)="vote(rowData)" 
-            pButton icon="fas fa-rocket" iconPos="left" class="btn-outline-darkRed" title="Vote for this guru"></button>
-          <button *ngIf="rowData['isElectedByCurrentUser']" disabled="disabled" 
-            pButton icon="fas fa-rocket" iconPos="left" class="btn-outline-gray6" title="You already voted"></button>
+          <button *ngIf="!rowData['isElectedByCurrentUser']" (click)="vote(rowData)" pButton icon="fas fa-rocket"
+            iconPos="left" class="btn-outline-darkRed" title="Vote for this guru"></button>
+          <button *ngIf="rowData['isElectedByCurrentUser']" disabled="disabled" pButton icon="fas fa-rocket"
+            iconPos="left" class="btn-outline-gray6" title="You already voted"></button>
 
         </td>
       </tr>

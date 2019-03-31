@@ -26,6 +26,7 @@ import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ROUTES } from './app.routing';
 import { SharedModule } from './shared';
 import { ElectionService } from './util/election.service';
+import { ContractDeploymentService } from './util/contract-deployment.service';
 import { ElectionFactoryService } from './util/election-factory.service';
 import { NominationComponent } from './pages/nomination/nomination.component';
 import { VotingComponent } from './pages/voting/voting.component';
@@ -73,7 +74,7 @@ import { DeploymentNetworkComponent } from './pages/deployment-network/deploymen
   ],
   exports: [
   ],
-  providers: [Web3Service, MessageService, ElectionService, ElectionFactoryService],
+  providers: [Web3Service, MessageService, ElectionService, ElectionFactoryService, ContractDeploymentService],
   bootstrap: [AppComponent],
   entryComponents: []
 })

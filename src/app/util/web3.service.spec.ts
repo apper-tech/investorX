@@ -3,7 +3,7 @@ const Web3 = require('web3');
 
 import {Web3Service} from './web3.service';
 
-import election_artifacts from '../contracts/Election.json';
+import election_artifacts from '../contracts/Migrations.json';
 
 declare let window: any;
 
@@ -22,19 +22,19 @@ describe('Web3Service', () => {
     service.bootstrapWeb3();
 
     return service.artifactsToContract(election_artifacts).then((abstraction) => {
-      expect(abstraction.currentProvider.host).toBe('http://localhost:8545');
+      expect(abstraction.currentProvider.host).toBe('http://127.0.0.1:8545');
     });
   }));
 
   it('should inject a the window web3 on a contract', inject([Web3Service], (service: Web3Service) => {
     window.web3 = {
-      currentProvider: new Web3.providers.HttpProvider('http://localhost:1337')
+      currentProvider: new Web3.providers.HttpProvider('http://127.0.0.1:8545')
     };
 
     service.bootstrapWeb3();
 
     return service.artifactsToContract(election_artifacts).then((abstraction) => {
-      expect(abstraction.currentProvider.host).toBe('http://localhost:1337');
+      expect(abstraction.currentProvider.host).toBe('http://127.0.0.1:8545');
     });
   }));
 });

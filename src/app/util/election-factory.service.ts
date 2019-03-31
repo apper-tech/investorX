@@ -13,7 +13,7 @@ export class ElectionFactoryService {
   ElectionFactoryContract: any;
   electionFactoryModel: ElectionFactoryModel;
   public isCurrentUserTheFactoryChairperson: boolean;
-  
+
   constructor(private web3Service: Web3Service) {
     this.initializeVariables();
   }
@@ -28,7 +28,7 @@ export class ElectionFactoryService {
     try {
       const deployedContract = await this.ElectionFactoryContract.deployed();
       const chairperson = await deployedContract.chairperson.call();
-      // Has to be updated before updating electionFactoryModel.chairperson. 
+      // Has to be updated before updating electionFactoryModel.chairperson.
       //  Becuase, electionFactoryModel.chairperson is used as an event at some code-blocks.
       this.isCurrentUserTheFactoryChairperson = chairperson === this.web3Service.wallet;
       this.electionFactoryModel.chairperson = chairperson;

@@ -7,7 +7,9 @@ import { ElectionFactoryModel } from '../classes/electionfactorymodel';
 declare let require: any;
 const electionFactory_artifacts = require('../../../build/contracts/ElectionFactory.json');
 
-@Injectable()
+@Injectable({
+  providedIn: 'root'
+})
 export class ElectionFactoryService {
 
   ElectionFactoryContract: any;

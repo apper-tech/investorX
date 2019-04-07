@@ -14,7 +14,7 @@ export class ElectionManagmentComponent implements OnInit {
     private router: Router, private route: ActivatedRoute) { }
 
   ngOnInit() {
-    this.electionFactoryService.electionFactoryModel.chairpersonObservable.subscribe((chairperson) => { 
+    this.electionFactoryService.electionFactoryModel.chairpersonObservable.subscribe((chairperson) => {
       if (!this.electionFactoryService.isCurrentUserTheFactoryChairperson) {
         this.router.navigate(['/']);
       }

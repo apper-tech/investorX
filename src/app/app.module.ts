@@ -24,10 +24,11 @@ import { AppRoutingModule } from './/app-routing.module';
 
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ROUTES } from './app.routing';
-import { SharedModule } from './shared';
+import { SharedPrimengModule } from './shared';
 import { ElectionService } from './util/election.service';
 import { ContractDeploymentService } from './util/contract-deployment.service';
 import { ElectionFactoryService } from './util/election-factory.service';
+import { UtilModule } from './util/util.module';
 import { NominationComponent } from './pages/nomination/nomination.component';
 import { VotingComponent } from './pages/voting/voting.component';
 import { ElectionManagmentComponent } from './pages/election-managment/election-managment.component';
@@ -54,6 +55,7 @@ import { DeploymentNetworkComponent } from './pages/deployment-network/deploymen
     HttpModule,
     FormsModule,
     HttpClientModule,
+    UtilModule,
 
     BrowserModule,
     BrowserAnimationsModule,
@@ -66,15 +68,16 @@ import { DeploymentNetworkComponent } from './pages/deployment-network/deploymen
     MenubarModule,
     CardModule,
 
-    SharedModule,
+    SharedPrimengModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === true,
-      preloadingStrategy: PreloadAllModules
+      preloadingStrategy: PreloadAllModules,
+      enableTracing: true 
     }),
   ],
   exports: [
   ],
-  providers: [Web3Service, MessageService, ElectionService, ElectionFactoryService, ContractDeploymentService],
+  providers: [Web3Service, MessageService],
   bootstrap: [AppComponent],
   entryComponents: []
 })

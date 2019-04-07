@@ -61,7 +61,7 @@ export class AppLayoutComponent implements OnInit {
 
           // navigate to testnet page if not on correct network
           if (!this.contractService.deployedNetworks.includes(this.web3Service.network)) {
-            this.router.navigate(['/testnet']);
+            this.router.navigate(['/deployment-network']);
         }
     }
 

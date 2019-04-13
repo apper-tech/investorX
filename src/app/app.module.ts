@@ -25,9 +25,7 @@ import { AppRoutingModule } from './/app-routing.module';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ROUTES } from './app.routing';
 import { SharedPrimengModule } from './shared';
-import { ElectionService } from './util/election.service';
-import { ContractDeploymentService } from './util/contract-deployment.service';
-import { ElectionFactoryService } from './util/election-factory.service';
+
 import { UtilModule } from './util/util.module';
 import { NominationComponent } from './pages/nomination/nomination.component';
 import { VotingComponent } from './pages/voting/voting.component';

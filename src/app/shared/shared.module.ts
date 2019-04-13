@@ -10,7 +10,7 @@ import { DataScrollerModule } from 'primeng/datascroller';
 import {
   PasswordModule, CheckboxModule, SelectButtonModule, CalendarModule,
   RadioButtonModule, InputTextModule, ButtonModule, InputMaskModule, InputTextareaModule,
-  DropdownModule, MultiSelectModule, ListboxModule, SpinnerModule, DialogModule, SharedModule, 
+  DropdownModule, MultiSelectModule, ListboxModule, SpinnerModule, DialogModule, SharedModule,
   DataTableModule, DataGridModule, TooltipModule, ContextMenuModule, TabViewModule,
   GrowlModule, FileUploadModule, ConfirmDialogModule, CaptchaModule, ProgressSpinnerModule,
   OverlayPanelModule, MessagesModule, MessageModule, AutoCompleteModule, ToggleButtonModule

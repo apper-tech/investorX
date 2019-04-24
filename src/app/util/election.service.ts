@@ -10,7 +10,9 @@ import { stringify } from '@angular/core/src/util';
 declare let require: any;
 const Election_artifacts = require('../../../build/contracts/Election.json');
 
-@Injectable()
+@Injectable(
+  { providedIn: 'root' }
+)
 export class ElectionService {
 
   ElectionContract: any;

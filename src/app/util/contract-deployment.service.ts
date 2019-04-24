@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Web3Service } from '../util/web3.service';
+
 import * as ElectionJson from '../contracts/Election.json'; // current main contract to check
-@Injectable()
+@Injectable(
+  { providedIn: 'root' }
+)
 // contrat deployment used to check current network in mist or metamask
 export class ContractDeploymentService {
 
   public deployedNetworks = [];
-  constructor(private ser: Web3Service) {
+  constructor() {
     this.GetNetworks();
   }
   private async GetNetworks() {

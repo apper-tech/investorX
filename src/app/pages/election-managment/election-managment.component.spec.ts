@@ -1,5 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { RouterTestingModule } from '@angular/router/testing';
 import { ElectionManagmentComponent } from './election-managment.component';
 
 describe('ElectionManagmentComponent', () => {
@@ -8,6 +8,7 @@ describe('ElectionManagmentComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [RouterTestingModule],
       declarations: [ ElectionManagmentComponent ]
     })
     .compileComponents();

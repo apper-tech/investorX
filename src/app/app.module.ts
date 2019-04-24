@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
 import { Web3Service } from './util/web3.service';
+import { ElectionService } from './util/election.service';
+import { ContractDeploymentService } from './util/contract-deployment.service';
+import { ElectionFactoryService } from './util/election-factory.service';
 
 import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
@@ -75,7 +78,7 @@ import { DeploymentNetworkComponent } from './pages/deployment-network/deploymen
   ],
   exports: [
   ],
-  providers: [Web3Service, MessageService],
+  providers: [Web3Service, MessageService, ElectionService, ElectionFactoryService, ContractDeploymentService],
   bootstrap: [AppComponent],
   entryComponents: []
 })

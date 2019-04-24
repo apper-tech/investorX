@@ -2,7 +2,7 @@ import { browser, by, element } from 'protractor';
 
 export class AppPage {
   navigateTo() {
-    browser.waitForAngularEnabled(false);
+    browser.waitForAngularEnabled(true);
     browser.get('/');
     return browser.driver.sleep(1000);
   }

@@ -20,7 +20,7 @@
 //         const watcher = async function (err, result) {
 //             event.stopWatching();
 //             if (err) { throw err; }
-                        
+
 //             //  const argumentValue = result.args.eventArgumentName;
 //             // Write custom logic
 //             customHandler(result.args);

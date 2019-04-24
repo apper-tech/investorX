@@ -1,7 +1,7 @@
 import { ReplaySubject } from 'rxjs/Rx';
 
 export class ElectionBaseModel {
-  
+
   private _chairperson: string;
   public get chairperson(): string {
     return this._chairperson;
@@ -12,5 +12,5 @@ export class ElectionBaseModel {
   }
   public chairpersonObservable = new ReplaySubject<string>(1);
 
-  constructor() {}
+  constructor() { }
 }

@@ -73,7 +73,7 @@ import { DeploymentNetworkComponent } from './pages/deployment-network/deploymen
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === true,
       preloadingStrategy: PreloadAllModules,
-      enableTracing: true 
+      enableTracing: true
     }),
   ],
   exports: [

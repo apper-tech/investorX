@@ -10,7 +10,7 @@ truffle migrate
 truffle test
 
 npm test
-ng e2e
+#ng e2e
 ng lint
 
 

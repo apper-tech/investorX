@@ -3620,10 +3620,58 @@
       "links": {},
       "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
       "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556100275852": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556100643166": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556100924070": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556101818352": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556109927080": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556110090735": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556110212442": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
+    },
+    "1556110294580": {
+      "events": {},
+      "links": {},
+      "address": "0x8f0483125FCb9aaAEFA9209D8E9d7b9C8B9Fb90F",
+      "transactionHash": "0x5a8372f2f58a2541ab860e16af00459ce00e4cbdb113bb068e520b160df90f86"
     }
   },
   "schemaVersion": "3.0.6",
-  "updatedAt": "2019-04-24T07:24:44.720Z",
+  "updatedAt": "2019-04-24T12:51:41.199Z",
   "devdoc": {
     "details": "The chairperson, in this contract, could be different from  the chairperson of each election.",
     "methods": {

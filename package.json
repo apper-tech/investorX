@@ -30,7 +30,7 @@
     "openzeppelin-solidity": "^2.1.2",
     "openzeppelin-test-helpers": "^0.1.2",
     "primeicons": "^1.0.0",
-    "primeng": "^7.0.0",
+    "primeng": "^7.1.0",
     "rxjs": "^6.4.0",
     "rxjs-compat": "^6.4.0",
     "truffle-contract": "^4.0.6",

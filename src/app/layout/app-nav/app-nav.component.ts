@@ -5,7 +5,7 @@ import { Web3Service } from '../../util/web3.service';
 import { ElectionFactoryService } from '../../util/election-factory.service';
 
 @Component({
-  selector: 'jhi-nav',
+  selector: 'app-jhi-nav',
   templateUrl: './app-nav.component.html',
   styleUrls: ['./app-nav.component.scss']
 })

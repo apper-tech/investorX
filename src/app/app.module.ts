@@ -8,6 +8,9 @@ import { AppComponent } from './app.component';
 import { MessageService } from './message.service';
 import { MessagesComponent } from './messages/messages.component';
 import { Web3Service } from './util/web3.service';
+import { ElectionService } from './util/election.service';
+import { ContractDeploymentService } from './util/contract-deployment.service';
+import { ElectionFactoryService } from './util/election-factory.service';
 
 import { MenuModule } from 'primeng/menu';
 import { MenubarModule } from 'primeng/menubar';
@@ -24,10 +27,9 @@ import { AppRoutingModule } from './/app-routing.module';
 
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { ROUTES } from './app.routing';
-import { SharedModule } from './shared';
-import { ElectionService } from './util/election.service';
-import { ContractDeploymentService } from './util/contract-deployment.service';
-import { ElectionFactoryService } from './util/election-factory.service';
+import { SharedPrimengModule } from './shared';
+
+import { UtilModule } from './util/util.module';
 import { NominationComponent } from './pages/nomination/nomination.component';
 import { VotingComponent } from './pages/voting/voting.component';
 import { ElectionManagmentComponent } from './pages/election-managment/election-managment.component';
@@ -54,6 +56,7 @@ import { DeploymentNetworkComponent } from './pages/deployment-network/deploymen
     HttpModule,
     FormsModule,
     HttpClientModule,
+    UtilModule,
 
     BrowserModule,
     BrowserAnimationsModule,
@@ -66,10 +69,11 @@ import { DeploymentNetworkComponent } from './pages/deployment-network/deploymen
     MenubarModule,
     CardModule,
 
-    SharedModule,
+    SharedPrimengModule,
     RouterModule.forRoot(ROUTES, {
       useHash: Boolean(history.pushState) === true,
-      preloadingStrategy: PreloadAllModules
+      preloadingStrategy: PreloadAllModules,
+      enableTracing: true
     }),
   ],
   exports: [

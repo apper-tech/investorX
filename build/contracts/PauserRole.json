@@ -74,6 +74,7 @@
       "type": "function"
     }
   ],
+  "metadata": "",
   "bytecode": "0x",
   "deployedBytecode": "0x",
   "sourceMap": "",
@@ -2485,8 +2486,8 @@
     "version": "0.5.0+commit.1d4f565a.Emscripten.clang"
   },
   "networks": {},
-  "schemaVersion": "3.0.3",
-  "updatedAt": "2019-03-30T12:56:25.825Z",
+  "schemaVersion": "3.0.6",
+  "updatedAt": "2019-04-23T14:09:56.194Z",
   "devdoc": {
     "methods": {}
   },

@@ -12,7 +12,9 @@ const contract = require('truffle-contract');
 
 declare let window: any;
 
-@Injectable()
+@Injectable(
+  { providedIn: 'root' }
+)
 export class Web3Service {
   private web3: any;
   public get Web3(): any {

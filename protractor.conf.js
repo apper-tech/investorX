@@ -10,17 +10,20 @@ exports.config = {
   ],
   capabilities: {
     'browserName': 'chrome',
+    marionette : true,
+    acceptInsecureCerts : true,
     chromeOptions: {
-      args: [ "--headless", "--no-sandbox", "--disable-gpu", "--window-size=800,600" ]
+      args: ["--headless", "--no-sandbox", "--disable-gpu", "--window-size=800,600"]
     }
   },
   directConnect: true,
   baseUrl: 'http://localhost:4200/',
+  rootElement: '.app-root',
   framework: 'jasmine',
   jasmineNodeOpts: {
     showColors: true,
     defaultTimeoutInterval: 30000,
-    print: function() {}
+    print: function () { }
   },
   plugins: [{
     package: 'protractor-console-plugin'

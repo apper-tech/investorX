@@ -10,7 +10,9 @@ import { stringify } from '@angular/core/src/util';
 declare let require: any;
 const Election_artifacts = require('../../../build/contracts/Election.json');
 
-@Injectable()
+@Injectable(
+  { providedIn: 'root' }
+)
 export class ElectionService {
 
   ElectionContract: any;
@@ -36,7 +38,7 @@ export class ElectionService {
     try {
       const deployedContract = await this.ElectionContract.deployed();
       const chairperson = await deployedContract.chairperson.call();
-      // Has to be updated before updating electionFactoryModel.chairperson. 
+      // Has to be updated before updating electionFactoryModel.chairperson.
       //  Becuase, electionFactoryModel.chairperson is used as an event at some code-blocks.
       this.isCurrentUserTheElectionChairperson = chairperson === this.web3Service.wallet;
       this.electionModel.chairperson = chairperson;
@@ -54,11 +56,13 @@ export class ElectionService {
       } else {
         const deployedContract = await this.ElectionContract.deployed();
         const gurusCount = parseInt(await deployedContract.getGurusCount.call(), 10);
-        if (this.electionModel.gurus === undefined || this.electionModel.gurus.length !== gurusCount)
+        if (this.electionModel.gurus === undefined || this.electionModel.gurus.length !== gurusCount) {
           this.electionModel.gurus = new Array(gurusCount);
+        }
         for (let index = 0; index < gurusCount; index++) {
-          if (this.electionModel.gurus[index] === undefined)
+          if (this.electionModel.gurus[index] === undefined) {
             this.electionModel.gurus[index] = new Guru();
+          }
 
           const gurusWallet = await deployedContract.gurusArray.call(index);
           this.electionModel.gurus[index].wallet = gurusWallet;
@@ -89,7 +93,7 @@ export class ElectionService {
     const gurusRaw = await deployedContract.gurus.call(gurusWallet);
     const guru = new Guru();
     guru.name = this.web3Service.Web3.utils.toUtf8(gurusRaw[0]);
-    if (guru.name == "") {
+    if (guru.name === '') {
       return null;
     }
     const votesCount = parseInt(await deployedContract.getVotesCount.call(gurusWallet), 10);

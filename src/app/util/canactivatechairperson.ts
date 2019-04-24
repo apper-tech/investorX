@@ -1,7 +1,7 @@
-import { Injectable } from "@angular/core";
-import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanLoad, Route } from "@angular/router";
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot, UrlTree, CanLoad, Route } from '@angular/router';
 import { Observable } from 'rxjs/Observable';
-import { ElectionFactoryService } from "./election-factory.service";
+import { ElectionFactoryService } from './election-factory.service';
 
 
 export class UserToken {

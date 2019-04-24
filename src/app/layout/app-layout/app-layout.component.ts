@@ -1,10 +1,10 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { ActivatedRoute, ActivatedRouteSnapshot, NavigationEnd, Router } from '@angular/router';
 import { Web3Service } from '../../util/web3.service';
 import { ContractDeploymentService } from '../../util/contract-deployment.service';
 
 @Component({
-    selector: 'jhi-layout',
+    selector: 'app-jhi-layout',
     templateUrl: './app-layout.component.html'
 })
 export class AppLayoutComponent implements OnInit {
@@ -31,7 +31,6 @@ export class AppLayoutComponent implements OnInit {
 
     updateTitle() {
         this.title = this.getPageTitle(this.router.routerState.snapshot.root);
-        ;
     }
 
 
@@ -59,9 +58,9 @@ export class AppLayoutComponent implements OnInit {
             this.wrapClass = false;
         }
 
-          // navigate to testnet page if not on correct network
-          if (!this.contractService.deployedNetworks.includes(this.web3Service.network)) {
-            this.router.navigate(['/testnet']);
+        // navigate to testnet page if not on correct network
+        if (!this.contractService.deployedNetworks.includes(this.web3Service.network)) {
+            this.router.navigate(['/deployment-network']);
         }
     }
 

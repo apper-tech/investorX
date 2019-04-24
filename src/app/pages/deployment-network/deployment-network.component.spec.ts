@@ -1,6 +1,6 @@
 /* tslint:disable:no-unused-variable */
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { CardModule } from 'primeng/card';
 import { DeploymentNetworkComponent } from './deployment-network.component';
 
 
@@ -10,9 +10,10 @@ describe('DeploymentNetworkComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DeploymentNetworkComponent ]
+      imports: [CardModule],
+      declarations: [DeploymentNetworkComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {

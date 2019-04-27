@@ -1,7 +1,9 @@
 
 # InvestorX <img src="./src/assets/images/logo.png" width="45" />
 
-> ***Crypto in-Time Investment Collaboration ÐApp***
+> ***Crypto in-Time Investment Collaboration ÐApp*** 
+
+> InvestorX latest version is available at http://investorx.io
 
 An Ethereum decentralized application for crypto-investment with decentralized suggestions and elections.
 
@@ -31,7 +33,7 @@ Current smart contracts handle:
 - Accepting votes from Followers
 - Running (starting & closing) the election by Chairperson 
 
-# Understanding the Low-level Execution Flow
+# Understanding the Execution Flow
 
 Here is what you need to know to be able to run and test the Smart Contract:
 
@@ -137,10 +139,14 @@ And here is who the page react differently to the chairperson:
 
 
 # Future Work
-To have a complete project, some few more things have to be done like:
+ > **InvestorX will be reimplemented with [Gnosis Apollo](https://gnosis-apollo.readthedocs.io) and [NonRedpudationX](https://github.com/apper-tech/nonrepudiationX).**
+ 
+Actually, to have a complete solution, few more things have to be done like:
  - Some Oracles have to be implemented to provide the Ether and tokens' prices and overall values of each wallet during and at the end of each competition cycle. In order for the Smart Contract to be able to calculate the ROI (Return on Investment).
  - The Chairperson role can be automated or replaced by some Smart Contract as follow:
+ 
 Suggestion 1: Set the Chairperson to be another smart contract where the logic of opening and closing an election cycle is, for example, could be triggered by anyone but verified against some rules (ex. based on time).  
+
 Suggestion 2: remove the Chairperson logic and make the smart contract depend on time sluts and store the Gurus and votes in a mapping indexed by a number that is calculated based on time. For example, to make the period last for 3 months: 
 
 	    batchNumber = (in seconds: timeNow - initialStratTime) / totalSecondsIn3Months

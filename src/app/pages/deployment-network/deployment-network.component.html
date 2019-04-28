@@ -1,7 +1,8 @@
 <div class="h2 font-weight-bold m-30 mb-5 px-4 py-3 bg-lightest text-primary">Testnet Checker: </div>
 
 <div class="ui-messages ui-messages-info d-block" role="alert">
-  You Need to connect your wallet (<b>MetaMask</b>, <b>Mist</b>, <b>Parity</b> or any other) to one of the following networks in order to be able to use this DApp!
+  You Need to connect your wallet (<b>MetaMask</b>, <b>Mist</b>, <b>Parity</b> or any other) to one of the following
+  networks in order to be able to use this DApp!
 </div>
 <br />
 <p>
@@ -46,8 +47,9 @@
   </div>
 </div>
 <div *ngIf="compareDeployedNetwork()" class="ui-messages ui-messages-success d-block" role="alert">
-  You are connected to  '<b>{{ this.web3Service.network }} </b>' ,You can use our DApp!
+  You are connected to <b>{{ this.web3Service.network }} </b>. You can use our DApp!
 </div>
 <div *ngIf="!compareDeployedNetwork()" class="ui-messages ui-messages-danger d-block" role="alert">
-  You are not able to use this DApp, because you are connected to '<b>{{ this.web3Service.network }} </b>'.
+  You are not able to use this DApp because you do not have Web3 enabled. We suggest that you use <a
+    href="https://metamask.io">MetaMast Chrome extension</a> or <a href="https://brave.com">Brave browser</a>.
 </div>

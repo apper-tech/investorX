@@ -47,7 +47,7 @@
   </div>
 </div>
 <div *ngIf="compareDeployedNetwork()" class="ui-messages ui-messages-success d-block" role="alert">
-  You are connected to <b>{{ this.web3Service.network }} </b> ,You can use our DApp!
+  You are connected to <b>{{ this.web3Service.network }} </b>. You can use our DApp!
 </div>
 <div *ngIf="!compareDeployedNetwork()" class="ui-messages ui-messages-danger d-block" role="alert">
   You are not able to use this DApp because you do not have Web3 enabled. We suggest that you use <a
